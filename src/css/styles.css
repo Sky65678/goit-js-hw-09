@@ -1,5 +1,6 @@
 * {
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
 
 ul {
@@ -39,24 +40,33 @@ ul {
   gap: 8px;
   margin-bottom: 8px;
 }
-.feedback-form > label > input {
-  border: 1px solid #808080;
-  border-radius: 4px;
-  width: 360px;
-  height: 40px;
-}
-.feedback-form > label > input:hover {
-  border: 1px solid #000;
-}
+.feedback-form > label > input,
 .feedback-form > label > textarea {
   border: 1px solid #808080;
   border-radius: 4px;
   width: 360px;
+  height: 40px;
+  padding: 8px 16px;
+  outline: transparent;
+}
+
+.feedback-form > label > textarea {
   height: 80px;
 }
 
+.feedback-form > label > input:hover,
 .feedback-form > label > textarea:hover {
   border: 1px solid #000;
+}
+
+.feedback-form > label > input::placeholder,
+.feedback-form > label > textarea::placeholder {
+  color: transparent;
+}
+
+.feedback-form > label > input:focus::placeholder,
+.feedback-form > label > textarea:focus::placeholder {
+  color: #2e2f42;
 }
 
 .feedback-form > button {
@@ -75,4 +85,5 @@ ul {
 }
 .feedback-form > button:hover {
   background: #6c8cff;
+  border: none;
 }
